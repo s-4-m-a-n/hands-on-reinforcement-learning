@@ -116,6 +116,27 @@ class FrozenLakeEnvironment:
         self._display_handle = None
 
 
+    def find(self, value):
+        """
+        Find the position of a given value in the grid.
+
+        Iterates through the grid and returns the first (row, column)
+        coordinate where the specified value is found.
+    
+        Args:
+            value (str): The grid cell value to search for
+                (e.g., 'S', 'G', 'H', 'F').
+    
+        Returns:
+            tuple[int, int] | None: The (row, column) position of the value
+            if found; otherwise, None.
+        
+        """
+        for r in range(self.n_rows):
+            for c in range(self.n_cols):
+                if self.grid[r][c] == value:
+                    return State((r, c), self.n_cols)
+        
     def move(self, current_state, action_idx):
         r, c = current_state.coord
         # Note that we are representing state as a combination of row idx and column idx like a coordinate system 
