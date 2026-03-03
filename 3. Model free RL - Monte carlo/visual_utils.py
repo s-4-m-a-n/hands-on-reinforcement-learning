@@ -4,7 +4,7 @@ import numpy as np
 from IPython.display import HTML
 import pandas as pd
 from IPython.display import display
-
+from frozen_lake_environment import State
 
 def render_policy_and_value(env, policy, V=None):
     """
@@ -29,7 +29,8 @@ def render_policy_and_value(env, policy, V=None):
         for c in range(cols):
             tile = env.grid[r][c]
             if tile in ["S", "F"]:
-                action = policy[r][c]
+                state_idx = State((r, c), env.n_cols).idx
+                action = policy[state_idx]
                 content = f"{icons[tile]} {arrows[action]}"
             else:
                 content = icons[tile]
@@ -112,7 +113,8 @@ def animate_policy_value_video(env, policy_history, V_history=None, interval=500
                 tile = env.grid[r][c]
                 if tile in ['H', 'G', 'S']:
                     continue
-                action = policy[r][c]
+                state_idx = State((r, c), env.n_cols).idx
+                action = policy[state_idx]
                 ax.text(c, r, arrows[action], ha='center', va='center', fontsize=15, color='red')
 
         # Overlay start, goal, hole
