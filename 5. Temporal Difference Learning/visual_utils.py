@@ -14,7 +14,7 @@ def render_policy_and_value(env, policy, Q=None):
     Args:
         env: Frozen Lake environment object with `grid`, `n_rows`, `n_cols`
         policy: 2D array of actions for each state
-        Q: 2D array of state-action values (optional)
+        Q: 2D array of state actions (optional)
     """
     rows, cols = env.n_rows, env.n_cols
     
@@ -38,7 +38,6 @@ def render_policy_and_value(env, policy, Q=None):
         grid_policy.append(row_display)
 
     df_policy = pd.DataFrame(grid_policy)
-    
     
     # --- state action Value Function Display ---
     if Q is not None:
@@ -64,7 +63,7 @@ def render_policy_and_value(env, policy, Q=None):
     display(df_policy.style.map(style_cells))
     
     if Q is not None:
-        print("State-Value Function:")
+        print("state-action value Function:")
         display(df_value.style.set_properties(**{
             'width': '60px', 
             'height': '60px', 
