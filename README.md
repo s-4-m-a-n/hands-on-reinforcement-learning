@@ -84,7 +84,9 @@ In the **mini-projects** section, additional reinforcement learning problems wil
 - Deep Q-Network (DQN)
 
 ### 7️⃣ Policy Gradient Methods ⚠️
-- REINFORCE algorithm
+- REINFORCE algorithm using simple linear function from scratch ✅
+- REINFORCE algorithm using NN in pytorch ⚠️
+
 
 ### 8️⃣ Actor-Critic Methods ❌
 
@@ -145,7 +147,7 @@ For any inquiries, suggestions, or feedback, feel free to reach out.
 
 [![Email](https://img.shields.io/badge/Email-dhakalsumn739%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:dhakalsumn739@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Suman%20Dhakal-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/suman-dhakal-2822a1198/)
----
+
 
 ## References
 - https://www.youtube.com/watch?v=ZHMWHr9811Ulist=PLEhdbSEZZbDaFWPX4gehhwB9vJZJ1DNm8&index=3
