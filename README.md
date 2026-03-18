@@ -83,10 +83,9 @@ In the **mini-projects** section, additional reinforcement learning problems wil
 - Q-Learning with Value Function Approximation
 - Deep Q-Network (DQN)
 
-### 7️⃣ Policy Gradient Methods ⚠️
-- REINFORCE algorithm using simple linear function from scratch ✅
-- REINFORCE algorithm using NN in pytorch ⚠️
-
+### 7️⃣ Policy Gradient Methods ✅
+- REINFORCE algorithm using simple linear function from scratch
+- REINFORCE algorithm using NN in pytorch
 
 ### 8️⃣ Actor-Critic Methods ❌
 
