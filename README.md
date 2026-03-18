@@ -87,10 +87,10 @@ In the **mini-projects** section, additional reinforcement learning problems wil
 - REINFORCE algorithm using simple linear function from scratch
 - REINFORCE algorithm using NN in pytorch
 
-### 8️⃣ Actor-Critic Methods ❌
-
-- Simple Actor-Critic (QAC)
-- Advantage Actor-Critic (A2C)
+### 8️⃣ Actor-Critic Methods ⚠️
+- simple Actor-critic(QAC) method from scratch ✅
+- Simple Actor-Critic (QAC) using NN in pytorch  ❌
+- Advantage Actor-Critic (A2C)  ❌
 
 ### Status Legend
 
