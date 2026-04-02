@@ -129,8 +129,7 @@ class FrozenLakeEnvironment:
         self.n_cols = len(self.grid[0])
         self.n_states = self.n_rows * self.n_cols
         self._display_handle = None
-
-
+            
     def find(self, value):
         """
         Find the position of a given value in the grid.
@@ -153,6 +152,7 @@ class FrozenLakeEnvironment:
                     return State((r, c), self.n_cols)
         
     def move(self, current_state, action_idx):
+        
         r, c = current_state.coord
         # Note that we are representing state as a combination of row idx and column idx like a coordinate system 
         step_r, step_c = self.action_idx_to_step[action_idx]
@@ -182,7 +182,7 @@ class FrozenLakeEnvironment:
             return {"new_state": current_state,
                     "reward": 0,
                     "is_terminated": True}
-                    
+            
         actual_action = action
         if self.slippery:
             # 70% chance of success, 10% chance for each other direction
