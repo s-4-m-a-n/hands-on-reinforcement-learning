@@ -130,7 +130,14 @@ class FrozenLakeEnvironment:
         self.n_states = self.n_rows * self.n_cols
         self._display_handle = None
 
-
+    def continuous_to_discrete(self, continuous_action):
+        """Maps range [-1, 1] to [0, 1, 2, 3]"""
+        val = continuous_action[0]
+        if val < -0.5: return 0    # Left
+        elif val < 0: return 1     # Down
+        elif val < 0.5: return 2    # Right
+        else: return 3
+            
     def find(self, value):
         """
         Find the position of a given value in the grid.
@@ -172,7 +179,7 @@ class FrozenLakeEnvironment:
         return cell, reward_point
 
 
-    def step(self, current_state, action):
+    def step(self, current_state, action, continuous_action=False):
         """
         The core Model-Free interface. 
         Agent provides an action, environment returns (next_state, reward, done).
@@ -182,7 +189,10 @@ class FrozenLakeEnvironment:
             return {"new_state": current_state,
                     "reward": 0,
                     "is_terminated": True}
-                    
+        
+        if continuous_action:
+            action = self.continuous_to_discrete(action)
+            
         actual_action = action
         if self.slippery:
             # 70% chance of success, 10% chance for each other direction
