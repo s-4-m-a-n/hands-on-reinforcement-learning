@@ -84,17 +84,19 @@ In the **mini-projects** section, additional reinforcement learning problems wil
 - Deep Q-Network (DQN)
 
 ### 7️⃣ Policy Gradient Methods ✅
-- REINFORCE algorithm using simple linear function from scratch
-- REINFORCE algorithm using NN in pytorch
+- REINFORCE algorithm using a simple linear function from scratch
+- REINFORCE algorithm using NN in PyTorch
 
 ### 8️⃣ Actor-Critic Methods ⚠️
 - simple Actor-critic(QAC) method from scratch ✅
-- Simple Actor-Critic (QAC) using NN in pytorch  ❌
-- Advantage Actor-Critic (A2C)  ❌
+- Simple Actor-Critic (QAC) using NN in PyTorch ✅
+- Advantage Actor-Critic (A2C)  ✅
+- Off-policy A2C ✅
+- deep deterministic policy gradient (DDPG) ⚠️
 
 ### Status Legend
 
-- ✅ **Completed** — Implementation is finished and no issues have been identified.
+- ✅ **Completed** — Implementation is finished, and no issues have been identified.
 - ⚠️ **Needs Review** — The implementation works but may contain potential issues and will be reviewed soon.
 - ❌ **Incorrect** — The implementation is known to be incorrect and will be reviewed and fixed soon.
 
